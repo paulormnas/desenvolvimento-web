@@ -8,6 +8,8 @@ O que você mais vai usar no dia a dia.
 
 ::left::
 
+<div class="mb-10">
+
 ### 1. Elements (Inspetor)
 
 - Mostra o **HTML** e **CSS** do site.
@@ -21,6 +23,8 @@ O que você mais vai usar no dia a dia.
 - Mostra **erros** (em vermelho).
 - Mostra avisos (em amarelo).
 - Permite rodar comandos JavaScript.
+
+</div>
 
 ::right::
 

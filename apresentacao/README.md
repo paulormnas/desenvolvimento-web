@@ -20,7 +20,7 @@ Este repositório contém os slides e materiais de apoio que usaremos em sala de
 ### Como rodar a apresentação no seu computador
 
 1. Certifique-se de ter o **Node.js** instalado.
-2. Abra o terminal nesta pasta.
+2. Abra o terminal nesta pasta `apresentacao`.
 3. Instale as dependências com o comando:
 
     ```bash
@@ -30,9 +30,15 @@ Este repositório contém os slides e materiais de apoio que usaremos em sala de
 4. Inicie a apresentação com:
 
     ```bash
-    npm run dev
+    npm run lecture-0
     ```
 
 5. Abra o navegador no link indicado (geralmente `http://localhost:3030`).
+
+6. Caso queira iniciar a próxima aula, execute o comando:
+
+    ```bash
+    npm run lecture-1
+    ```
 
 Bons estudos! 💻🛡️

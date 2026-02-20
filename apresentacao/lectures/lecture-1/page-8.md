@@ -8,7 +8,7 @@ Incorporando visual com a tag `<img>`.
 
 ::left::
 
-<div class="text-justify mr-8">
+<div class="mb-40 mr-8">
 
 ## Atributos
 

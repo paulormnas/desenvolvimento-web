@@ -8,11 +8,15 @@ A tag `<a>` conecta a web.
 
 ::left::
 
+<div class="mb-55">
+
 ## Atributos
 
 - **href**: O endereço de destino.
 - **target**: Onde abrir (`_blank` para nova aba).
 - **title**: Texto de ajuda ao passar o mouse.
+
+</div>
 
 ::right::
 

@@ -8,6 +8,8 @@ A diferença entre Bloco e Linha.
 
 ::left::
 
+<div class="mb-10">
+
 ## `<div>` (Bloco)
 
 - Ocupa toda a largura da linha.
@@ -19,6 +21,8 @@ A diferença entre Bloco e Linha.
 - Ocupa só o espaço do conteúdo.
 - Fica ao lado.
 - Usado para destacar texto.
+
+</div>
 
 ::right::
 

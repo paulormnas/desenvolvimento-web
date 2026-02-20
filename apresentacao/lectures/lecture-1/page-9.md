@@ -8,17 +8,25 @@ Agrupando itens.
 
 ::left::
 
-## Não Ordenada (`<ul>`)
+<div class="mb-40">
+
+### Não Ordenada (`<ul>`)
 
 - Itens com marcadores (bolinhas).
 - A ordem não importa.
 
-## Ordenada (`<ol>`)
+<br>
+
+### Ordenada (`<ol>`)
 
 - Itens numerados (1, 2, 3...).
 - A ordem importa.
 
+</div>
+
 ::right::
+<div class="-mb-4">
+</div >
 
 **Código:**
 

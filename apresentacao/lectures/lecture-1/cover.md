@@ -4,7 +4,7 @@ background: https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=r
 transition: slide-left
 ---
 
-# Desenvolvimento Web
+# Programação de Aplicações Web
 
 Aula 1: Introdução ao HTML e Estrutura Web
 

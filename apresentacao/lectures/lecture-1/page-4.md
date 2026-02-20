@@ -8,12 +8,16 @@ O HTML usa etiquetas para dar significado.
 
 ::left::
 
+<div class="mb-50">
+
 ### Texto e Títulos
 
 - `<h1>` a `<h6>`: Títulos
 - `<p>`: Parágrafos
 - `<strong>`: **Negrito** (Importante)
 - `<em>`: *Itálico* (Ênfase)
+
+</div>
 
 ::right::
 

@@ -4,7 +4,7 @@ background: https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1
 transition: slide-left
 ---
 
-# Desenvolvimento Web
+# Programação de Aplicações Web
 
 Aula 0: Conceitos Iniciais sobre a Web
 

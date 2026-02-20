@@ -8,7 +8,7 @@ Todo documento HTML precisa desta estrutura padrão.
 
 ::left::
 
-<v-clicks>
+<div class="mb-40">
 
 - **DOCTYPE:**
   Avisa que é HTML5.
@@ -19,9 +19,11 @@ Todo documento HTML precisa desta estrutura padrão.
 - **body:**
   O que o usuário vê.
 
-</v-clicks>
+</div>
 
 ::right::
+
+<div class="mb-40">
 
 ```html {all|1|2|3-6|7-10|11}
 <!DOCTYPE html>
@@ -36,3 +38,5 @@ Todo documento HTML precisa desta estrutura padrão.
   </body>
 </html>
 ```
+
+</div>
