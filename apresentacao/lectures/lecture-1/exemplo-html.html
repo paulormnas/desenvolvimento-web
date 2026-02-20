@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de Programação Web</title>
+    <style id="page-style">
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        button:hover {
+            background-color: #c0392b;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="toggleCSS()">Alternar CSS (Ligar/Desligar)</button>
+
+    <header>
+        <div class="container">
+            <h1>Estudo de Desenvolvimento Web</h1>
+            <p>Construindo a base da internet</p>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="card">
+            <h2>O que é HTML?</h2>
+            <p><strong>HTML</strong> (HyperText Markup Language) é a linguagem de marcação padrão para documentos projetados para serem exibidos em um navegador da web. Ele pode ser assistido por tecnologias como <em>Cascading Style Sheets (CSS)</em> e linguagens de script como <strong>JavaScript</strong>.</p>
+        </div>
+
+        <div class="card">
+            <h2>Conceitos Fundamentais</h2>
+            <ul>
+                <li>Tags e Elementos</li>
+                <li>Atributos</li>
+                <li>Semântica</li>
+                <li>Acessibilidade</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Exemplo de Código</h2>
+            <p>Abaixo temos um exemplo de como estruturamos um link:</p>
+            <code>&lt;a href="https://developer.mozilla.org"&gt;MDN Web Docs&lt;/a&gt;</code>
+            <p>Resultado: <a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></p>
+        </div>
+
+        <div class="card">
+            <h2>Imagem Ilustrativa</h2>
+            <p>O desenvolvimento web é uma área vasta e cheia de oportunidades.</p>
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Código de Programação na Tela">
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Desenvolvido para a aula de Introdução ao HTML</p>
+    </footer>
+
+    <script>
+        function toggleCSS() {
+            var styleSheet = document.getElementById("page-style");
+            if (styleSheet.disabled) {
+                styleSheet.disabled = false;
+            } else {
+                styleSheet.disabled = true;
+            }
+        }
+    </script>
+</body>
+</html>
