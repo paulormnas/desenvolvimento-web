@@ -2,92 +2,92 @@
 src: lectures/lecture-1/cover.md
 ---
 
-<!-- Page 1 -->
----
+# Pagina 1 
 
+---
 src: lectures/lecture-1/page-1.md
 ---
 
-<!-- Page 2 -->
----
+# Pagina 2 
 
+---
 src: lectures/lecture-1/page-2.md
 ---
 
-<!-- Page 3 -->
----
+# Pagina 3 
 
+---
 src: lectures/lecture-1/page-3.md
 ---
 
-<!-- Page 4 -->
----
+# Pagina 4 
 
+---
 src: lectures/lecture-1/page-4.md
 ---
 
-<!-- Page 5 -->
----
+# Pagina 5 
 
+---
 src: lectures/lecture-1/page-5.md
 ---
 
-<!-- Page 6 -->
----
+# Pagina 6 
 
+---
 src: lectures/lecture-1/page-6.md
 ---
 
-<!-- Page 7 -->
----
+# Pagina 7 
 
+---
 src: lectures/lecture-1/page-7.md
 ---
 
-<!-- Page 8 -->
----
+# Pagina 8 
 
+---
 src: lectures/lecture-1/page-8.md
 ---
 
-<!-- Page 9 -->
----
+# Pagina 9 
 
+---
 src: lectures/lecture-1/page-9.md
 ---
 
-<!-- Page 10 -->
----
+# Pagina 10 
 
+---
 src: lectures/lecture-1/page-10.md
 ---
 
-<!-- Page 11 -->
----
+# Pagina 11 
 
+---
 src: lectures/lecture-1/page-11.md
 ---
 
-<!-- Page 12 -->
----
+# Pagina 12 
 
+---
 src: lectures/lecture-1/page-12.md
 ---
 
-<!-- Page 13 -->
----
+# Pagina 13 
 
+---
 src: lectures/lecture-1/page-13.md
 ---
 
-<!-- Page 14 -->
----
+# Pagina 14 
 
+---
 src: lectures/lecture-1/page-14.md
 ---
 
-<!-- Page 15 -->
----
+# Pagina 15 
 
+---
 src: lectures/lecture-1/page-15.md
 ---
