@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel e Mídias - Sorveteria Delícia Gelada</title>
+</head>
+
+<body>
+    <header>
+        <h1>🍦 Painel Administrativo - Sorveteria Delícia Gelada</h1>
+        <nav>
+            <ul>
+                <li><a href="#tabela-vendas">Relatório de Vendas (Tabela)</a></li>
+                <li><a href="#midias-audio-video">Campanhas (Áudio e Vídeo)</a></li>
+                <li><a href="#localizacao-mapa">Nossa Localização (Iframe)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ============================================== -->
+        <!-- EXEMPLO DE TABELA COMPLETA (SEMÂNTICA)         -->
+        <!-- ============================================== -->
+        <section id="tabela-vendas">
+            <h2>Balancete Trimestral de Vendas</h2>
+            <p>Confira abaixo os resultados dos últimos meses usando uma tabela de dados:</p>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Mês</th>
+                        <th>Sabor Mais Vendido</th>
+                        <th>Unidades Vendidas</th>
+                        <th>Faturamento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Janeiro</td>
+                        <td>Morango Supremo</td>
+                        <td>1.250</td>
+                        <td>R$ 15.400,00</td>
+                    </tr>
+                    <tr>
+                        <td>Fevereiro</td>
+                        <td>Chocolate Belga</td>
+                        <td>1.430</td>
+                        <td>R$ 18.250,00</td>
+                    </tr>
+                    <tr>
+                        <td>Março</td>
+                        <td>Bacio Di Nonno</td>
+                        <td>1.300</td>
+                        <td>R$ 16.900,00</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Total do Trimestre</th>
+                        <td>-</td>
+                        <th>3.980</th>
+                        <th>R$ 50.550,00</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- ============================================== -->
+        <!-- EXEMPLO DE MULTIMÍDIA (ÁUDIO E VÍDEO NATIVOS)  -->
+        <!-- ============================================== -->
+        <section id="midias-audio-video">
+            <h2>Materiais Publicitários</h2>
+
+            <article>
+                <h3>1. Jingle de Rádio (Tag de Áudio)</h3>
+                <p>Aperte o play para ouvir a nossa nova propaganda de rádio!</p>
+                <audio src="https://actions.google.com/sounds/v1/cartoon/cartoon_boing.ogg" controls></audio>
+            </article>
+
+            <br>
+
+            <article>
+                <h3>2. Comercial de TV (Tag de Vídeo)</h3>
+                <p>Assista ao nosso novo comercial feito para o verão:</p>
+                <!-- tag video com width, controls, reprodução silenciosa inicial (muted) e uma capa (poster) -->
+                <video src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" controls
+                    width="500" muted>
+                    Seu navegador não suporta a exibição de vídeos nativos com HTML5.
+                </video>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- ============================================== -->
+        <!-- EXEMPLOS DE IFRAMES (MAPAS E YOUTUBE)          -->
+        <!-- ============================================== -->
+        <section id="localizacao-mapa">
+            <h2>Embutindo sites e ferramentas de terceiros (Iframe)</h2>
+
+            <article>
+                <h3>1. Como é feita a nossa casquinha? (Vídeo do YouTube)</h3>
+                <p>Nesse iframe, nós incorporamos perfeitamente o player do YouTube no nosso próprio site:</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/TEeCDtAkcH4"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </article>
+
+            <br>
+
+            <article>
+                <h3>2. Onde Estamos (Google Maps)</h3>
+                <p>Venha nos visitar em nossa sede física localizada na Avenida Paulista:</p>
+                <!-- O Google Maps também fornece um snippet de iframe facílimo de embutir -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14628.618641974797!2d-46.6601672!3d-23.5629472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1698765432100!5m2!1spt-BR!2sbr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </article>
+        </section>
+
+    </main>
+
+    <br>
+
+    <footer>
+        <p>&copy; 2026 Sorveteria Delícia Gelada. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
