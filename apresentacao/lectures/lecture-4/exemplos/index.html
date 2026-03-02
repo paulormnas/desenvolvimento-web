@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo: Web Responsiva, Flexbox e Grid</title>
+    <!-- Conectando nosso arquivo CSS separado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Cabeçalho demonstrando Flexbox e adaptação responsiva -->
+    <header class="cabecalho">
+        <h1>Site Responsivo</h1>
+        <nav class="navegacao">
+            <a href="#">Home</a>
+            <a href="#">Sobre</a>
+            <a href="#">Serviços</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <main class="conteudo-principal">
+        <section class="destaque">
+            <h2>Abordagem Mobile First</h2>
+            <p>Este layout começa de forma simples, em coluna única (ideal para celulares), e vai se expandindo usando
+                Media Queries para otimizar o espaço em telas de Tablets e Desktops.</p>
+        </section>
+
+        <!-- Galeria demonstrando o uso de CSS Grid Layout -->
+        <section class="galeria">
+            <article class="cartao">
+                <h3>Item 1</h3>
+                <p>Layout maleável sem uso de tabelas ou floats, tudo com <strong>Grid</strong> e
+                    <strong>Flexbox</strong>.</p>
+            </article>
+            <article class="cartao">
+                <h3>Item 2</h3>
+                <p>Adaptação do conteúdo baseada em pontos de quebra (Breakpoints).</p>
+            </article>
+            <article class="cartao">
+                <h3>Item 3</h3>
+                <p>Uso de unidades relativas como <code v-pre>rem</code>, <code v-pre>%</code> e <code v-pre>vw</code>
+                    no CSS.</p>
+            </article>
+            <article class="cartao">
+                <h3>Item 4</h3>
+                <p>Design totalmente elástico e adaptável ao dispositivo.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; 2026 Curso de Desenvolvimento Web - Aula 4</p>
+    </footer>
+</body>
+
+</html>

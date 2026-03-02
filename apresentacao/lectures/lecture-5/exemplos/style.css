@@ -1,0 +1,243 @@
+/* =========================================================
+   1. Variáveis Globais (Custom Properties)
+   ========================================================= */
+:root {
+    /* Paleta de Cores */
+    --cor-fundo: #f8fafc;
+    --cor-texto: #1e293b;
+    --cor-primaria: #3b82f6;
+    /* Azul */
+    --cor-primaria-hover: #1d4ed8;
+    --cor-secundaria: #ef4444;
+    /* Vermelho */
+    --cor-secundaria-hover: #b91c1c;
+    --cor-branco: #ffffff;
+
+    /* Espaçamentos e Estruturas */
+    --espacamento-padrao: 1.5rem;
+    --borda-raio: 8px;
+    --sombra-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --sombra-card-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+    /* Animações */
+    --tempo-transicao: 0.3s;
+}
+
+/* =========================================================
+   2. Reset e Estilos Base
+   ========================================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* =========================================================
+   3. Estrutura e Metodologia BEM (Block, Element, Modifier)
+   ========================================================= */
+.cabecalho {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    padding: var(--espacamento-padrao);
+    text-align: center;
+}
+
+.cabecalho__titulo {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.cabecalho__subtitulo {
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.conteudo {
+    padding: var(--espacamento-padrao);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* =========================================================
+   4. Animações Keyframes Completas (@keyframes)
+   ========================================================= */
+/* Definindo uma animação contínua (ex: alerta pulsante) */
+@keyframes pulsarAviso {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+        border-color: var(--cor-secundaria);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+.alerta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 1rem;
+    border: 2px solid transparent;
+    /* base transparente para a animação */
+    border-radius: var(--borda-raio);
+    margin-bottom: 2rem;
+
+    /* Chamando a animação de keyframes: Nome, Duração, Iterações, Velocidade */
+    animation: pulsarAviso 2.5s infinite ease-in-out;
+}
+
+.alerta__icone {
+    font-size: 1.5rem;
+}
+
+/* =========================================================
+   5. Grid para organizar os cards (Recap rápida da Aula 4)
+   ========================================================= */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--espacamento-padrao);
+}
+
+/* =========================================================
+   6. Transformações e Transições (Card Block)
+   ========================================================= */
+.card {
+    background-color: var(--cor-branco);
+    padding: var(--espacamento-padrao);
+    border-radius: var(--borda-raio);
+    box-shadow: var(--sombra-card);
+
+    /* Configurando uma transição suave para Transform e Box Shadow */
+    transition: transform var(--tempo-transicao), box-shadow var(--tempo-transicao);
+}
+
+/* Ao passar o mouse, o card todo flutua sutilmente para cima */
+.card:hover {
+    transform: translateY(-5px);
+    /* Move 5px para cima (eixo Y negativo) */
+    box-shadow: var(--sombra-card-hover);
+}
+
+.card__titulo {
+    margin-bottom: 1rem;
+    color: var(--cor-primaria);
+}
+
+.card__texto {
+    margin-bottom: 1.5rem;
+}
+
+/* =========================================================
+   7. Botões e Modificadores (BEM) com Transição de Cor
+   ========================================================= */
+.card__acoes {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--cor-branco);
+
+    /* Transição suave de fundo ao focar no botão (tirando a mudança brusca) */
+    transition: background-color var(--tempo-transicao) ease-in;
+}
+
+/* Modificadores do botão (cores) usam Variáveis */
+.btn--primario {
+    background-color: var(--cor-primaria);
+}
+
+.btn--primario:hover {
+    background-color: var(--cor-primaria-hover);
+}
+
+.btn--secundario {
+    background-color: var(--cor-secundaria);
+}
+
+.btn--secundario:hover {
+    background-color: var(--cor-secundaria-hover);
+}
+
+/* =========================================================
+   8. Transformações Avançadas e Divertidas
+   ========================================================= */
+.card__icones {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.icone {
+    cursor: pointer;
+    /* Toda vez que uma propriedade originada do CSS mudar, aplique esta transição! */
+    transition: all 0.4s ease-out;
+}
+
+/* Efeito de aumento elástico */
+.icone--crescente:hover {
+    transform: scale(1.6);
+    /* Infla em 60% */
+}
+
+/* Efeito de voar e encolher */
+.icone--flutuante:hover {
+    transform: translateY(-20px) scale(0.8);
+}
+
+/* Efeito de rotação completa */
+.icone--rotativo:hover {
+    transform: rotate(360deg) scale(1.2);
+}
+
+/* =========================================================
+   9. Sobrescrevendo Variáveis (O Poder do "Dark Mode")
+   ========================================================= */
+/* Este modificador repassará um novo conjunto de cores para o card, 
+   sem precisar reescrever as propriedades reais de background e cor! */
+.card--tema-escuro {
+    /* Alteramos os valores APENAS dentro deste escopo */
+    background-color: #1e293b;
+    color: #e2e8f0;
+}
+
+.card--tema-escuro .card__titulo {
+    color: #60a5fa;
+    /* Titulo num azul mais claro pra contrastar */
+}
+
+/* =========================================================
+   10. Rodapé Simples
+   ========================================================= */
+.rodape {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    color: #64748b;
+}

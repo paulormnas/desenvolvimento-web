@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos CSS3 - Exemplos Aula 3</title>
+
+    <!-- 1. Formas de Inclusão Interna -->
+    <style>
+        .aviso-interno {
+            background-color: lightyellow;
+            border: 1px dashed orange;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- 1. Formas de Inclusão Externa (Melhor Prática) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 5. Tipografia - Importando fonte do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- 6. Position Sticky - Fixa no topo ao rolar -->
+    <header id="cabecalho-principal">
+        <h1>Meu Primeiro Site com CSS3</h1>
+        <p>Aplicando os fundamentos da Aula 3</p>
+    </header>
+
+    <!-- Container geral para limitar largura e centralizar (usando margin: auto) -->
+    <div class="container">
+
+        <!-- 1. Formas de Inclusão Inline e Interna -->
+        <section class="secao-inclusao">
+            <h2>1. Formas de Inclusão</h2>
+            <!-- Inline style -->
+            <p style="color: red; font-weight: bold;">Este texto usa CSS Inline (Atributo style direto na tag HTML).</p>
+            <p class="aviso-interno">Este texto usa CSS Interno (A tag &lt;style&gt; no &lt;head&gt; do documento).</p>
+            <p class="texto-externo">Este texto é estilizado pelo arquivo CSS Externo. 🎉</p>
+        </section>
+
+        <!-- 2. Seletores, Cascata e Especificidade -->
+        <section class="secao-seletores">
+            <h2>2. Seletores e Hierarquia</h2>
+            <div id="caixa-especial">
+                <p>Este parágrafo obedece a uma regra baseada em ID (#caixa-especial).</p>
+                <p class="destaque">Este parágrafo obedece a uma regra por Classe (.destaque).</p>
+                <!-- Pseudo-classes -->
+                <button class="btn-interativo">Passe o mouse aqui (:hover)</button>
+            </div>
+
+            <ul class="lista-numerada">
+                <li>Item 1 (pseudo-classe :first-child)</li>
+                <li>Item 2 (pseudo-classe :nth-child)</li>
+                <li>Item 3 (pseudo-classe :last-child)</li>
+            </ul>
+        </section>
+
+        <!-- 3. Box Model e Box-sizing -->
+        <section class="secao-box-model">
+            <h2>3. O Box Model</h2>
+            <div class="box-model-exemplo">
+                <p>Eu sou uma caixa! Inspecione-me para ver meu <strong>Content</strong>, <strong>Padding</strong>,
+                    <strong>Border</strong> e <strong>Margin</strong>.</p>
+                <!-- Uma caixa dentro de outra para ver o margin em ação -->
+                <div class="box-model-interna">
+                    Caixa interna empurrando a borda.
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Cores e Backgrounds -->
+        <section class="secao-backgrounds">
+            <h2>4. Cores e Fundos</h2>
+            <div class="bg-solido">Fundo de Cor Sólida (Hexadecimal)</div>
+            <div class="bg-gradiente">Fundo Gradiente Linear</div>
+            <!-- Imagem de fundo com url() -->
+            <div class="bg-imagem">
+                <h3 class="texto-sombreado">Imagem de Fundo</h3>
+            </div>
+        </section>
+
+        <!-- 5. Tipografia -->
+        <section class="secao-tipografia">
+            <h2>5. Tipografia</h2>
+            <p class="texto-base">Este é um texto usando a fonte padrão externa (Roboto). Tem <b>peso normal</b>.</p>
+            <p class="texto-diferenciado">Este texto usa uma tipografia modificada, com tamanhos diferentes, itálico,
+                alinhamento à direita e maior espaçamento de linhas (line-height).</p>
+            <a href="#" class="link-customizado">Um link sem aquele sublinhado feio</a>
+        </section>
+
+        <!-- 6. Display e Posicionamento -->
+        <section class="secao-display-position">
+            <h2>6. Display e Position</h2>
+
+            <h3>Comportamento Display</h3>
+            <span class="elemento-inline">Sou Inline</span>
+            <span class="elemento-inline">Fluímos</span>
+            <span class="elemento-inline">Lado a Lado</span>
+
+            <div class="elemento-block">Sou Block (Ocupo a linha toda)</div>
+            <div class="elemento-block">Sou outro Block</div>
+
+            <div class="elemento-inline-block">Sou Inline-Block (1)</div>
+            <div class="elemento-inline-block">Sou Inline-Block (2)</div>
+
+            <h3>Posicionamento (Position & z-index)</h3>
+            <div class="area-posicionamento relative">
+                <div class="caixa-posicao static">Static (Padrão)</div>
+                <div class="caixa-posicao relative-deslocada">Relative (Deslocada)</div>
+                <div class="caixa-posicao absolute">Absolute (Fora do fluxo)</div>
+                <!-- Demonstração do z-index -->
+                <div class="caixa-posicao por-cima">Com z-index maior!</div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Position Fixed - Botão no canto da tela preso -->
+    <a href="#" class="botao-flutuante">Subir ⬆</a>
+
+</body>
+
+</html>

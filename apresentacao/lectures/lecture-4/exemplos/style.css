@@ -1,0 +1,150 @@
+/* =========================================================
+   1. Configurações Globais (Unidades Relativas e Reset)
+   ========================================================= */
+* {
+    box-sizing: border-box;
+    /* A largura inclui o padding, evitando que o layout quebre */
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /* Define o tamanho base para o uso de "rem". Geralmente é 16px no navegador. */
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   2. ESTILOS BASE: MOBILE FIRST (Telas menores por padrão)
+   ========================================================= */
+
+/* Cabeçalho usando Flexbox (Empilhado no Mobile) */
+.cabecalho {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+
+    /* Configuração Flexbox */
+    display: flex;
+    flex-direction: column;
+    /* No celular, empilha os itens verticalmente */
+    align-items: center;
+    /* Centraliza os itens horizontalmente */
+    gap: 1rem;
+    /* Espaçamento entre o título e as opções de menu */
+}
+
+/* Navegação também empilhada no celular */
+.navegacao {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.navegacao a {
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem;
+    background-color: #34495e;
+    text-align: center;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.navegacao a:hover {
+    background-color: #1abc9c;
+}
+
+/* Área central de conteúdo */
+.conteudo-principal {
+    padding: 1rem;
+    width: 100%;
+    /* max-width evita que em telas gigantes o conteúdo fique largo demais e ruim de ler */
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Centraliza a caixa na horizontal */
+}
+
+.destaque {
+    background-color: #ecf0f1;
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Galeria usando Grid (Layout Base: 1 Coluna no celular) */
+.galeria {
+    display: grid;
+    /* No celular: uma grade de apenas 1 coluna que preenche a fração inteira (1fr) */
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    /* "gap" substitui o margin para separar as caixas no Grid e Flexbox */
+}
+
+.cartao {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rodape {
+    text-align: center;
+    padding: 2rem;
+    background-color: #bdc3c7;
+    margin-top: 2rem;
+}
+
+/* =========================================================
+   3. MEDIA QUERIES (Ponto de Quebra para TABLETS)
+   SÓ APLICA essas regras quando a tela for maior que 768px
+   ========================================================= */
+@media screen and (min-width: 768px) {
+
+    /* Altera o Cabeçalho para alinhar em linha ao invés de empilhado */
+    .cabecalho {
+        flex-direction: row;
+        /* Lado a lado usando Flexbox */
+        justify-content: space-between;
+        /* Joga o título para esquerda e o menu para direita */
+        padding: 1rem 4vw;
+        /* Exemplo de uso de Unidade Referente à Viewport (vw) */
+    }
+
+    .navegacao {
+        flex-direction: row;
+        /* Links do menu lado a lado */
+        width: auto;
+    }
+
+    /* Galeria passa a ter 2 colunas no Grid */
+    .galeria {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* =========================================================
+   4. MEDIA QUERIES (Ponto de Quebra para DESKTOP)
+   SÓ APLICA essas regras quando a tela for maior que 1024px
+   ========================================================= */
+@media screen and (min-width: 1024px) {
+    .destaque {
+        padding: 4rem 2rem;
+        /* Aumenta a área de destaque na tela maior */
+        font-size: 1.2rem;
+        /* Texto levemente maior */
+    }
+
+    /* Galeria passa a usar 4 colunas perfeitamente divididas na tela grande */
+    .galeria {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

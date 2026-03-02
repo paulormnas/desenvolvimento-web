@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo: Animações, Variáveis e BEM</title>
+    <!-- Conectando nosso arquivo CSS separado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Exemplo prático usando a Metodologia BEM para as classes -->
+    <header class="cabecalho">
+        <h1 class="cabecalho__titulo">Aula 5: Estilização Avançada</h1>
+        <p class="cabecalho__subtitulo">Exemplo prático de Transições, Transformações, Animações e Variáveis CSS.</p>
+    </header>
+
+    <main class="conteudo">
+        <!-- Elemento animado com @keyframes -->
+        <div class="alerta">
+            <span class="alerta__icone">⚠️</span>
+            <p>Pressione os botões abaixo para interagir com os elementos!</p>
+        </div>
+
+        <section class="cards">
+            <!-- Card 1: Focado em Transição Suave -->
+            <article class="card">
+                <h3 class="card__titulo">1. Transição de Cores</h3>
+                <p class="card__texto">Passe o mouse sobre os botões para ver as cores mudando suavemente, graças ao
+                    <code v-pre>transition</code>.</p>
+                <div class="card__acoes">
+                    <button class="btn btn--primario">Botão Primário</button>
+                    <button class="btn btn--secundario">Botão Secundário</button>
+                </div>
+            </article>
+
+            <!-- Card 2: Focado em Transform (Escala e Translação) -->
+            <article class="card">
+                <h3 class="card__titulo">2. Transformações</h3>
+                <p class="card__texto">Passe o mouse neste card inteiro e nos ícones abaixo para ver o uso do <code
+                        v-pre>transform: scale()</code> e <code v-pre>translateY()</code>.</p>
+                <div class="card__icones">
+                    <div class="icone icone--flutuante">🚀</div>
+                    <div class="icone icone--crescente">🌟</div>
+                    <div class="icone icone--rotativo">⚙️</div>
+                </div>
+            </article>
+
+            <!-- Card 3: Focado em CSS Variables -->
+            <article class="card card--tema-escuro">
+                <h3 class="card__titulo">3. Variáveis CSS (Dark Mode)</h3>
+                <p class="card__texto">Este card usa as variáveis globais modificadas localmente para criar um tema
+                    escuro dinâmico.</p>
+                <div class="card__acoes">
+                    <button class="btn btn--primario">Modo Noturno Local</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; 2026 Curso de Desenvolvimento Web - Aula 5</p>
+    </footer>
+</body>
+
+</html>
