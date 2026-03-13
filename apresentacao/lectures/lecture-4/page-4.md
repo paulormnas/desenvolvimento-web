@@ -14,6 +14,6 @@ A web não é apenas lida em monitores de Desktop, mas principalmente em telas c
 As unidades fundamentais da web responsiva.
 
 - `%`: Relativo ao elemento pai.
-- `vw` (Viewport Width): `100vw` é toda a largura do ecrã disponível.
-- `vh` (Viewport Height): `100vh` é a atura total vertical da tela.
+- `vw` (Viewport Width): `100vw` é toda a largura da tela disponível.
+- `vh` (Viewport Height): `100vh` é a altura total vertical da tela.
 - `rem`: Relativa ou modificador o tamanho base (root) definido pela tag `<html>`.

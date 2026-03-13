@@ -37,3 +37,27 @@ src: lectures/lecture-4/page-5.md
 ---
 src: lectures/lecture-4/page-6.md
 ---
+
+# Pagina 7
+
+---
+src: lectures/lecture-4/page-7.md
+---
+
+# Pagina 8
+
+---
+src: lectures/lecture-4/page-8.md
+---
+
+# Pagina 9
+
+---
+src: lectures/lecture-4/page-9.md
+---
+
+# Pagina 10
+
+---
+src: lectures/lecture-4/page-10.md
+---
