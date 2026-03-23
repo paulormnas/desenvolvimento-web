@@ -11,7 +11,8 @@
     "lecture-2": "slidev lecture-2.md",
     "lecture-3": "slidev lecture-3.md",
     "lecture-4": "slidev lecture-4.md",
-    "lecture-5": "slidev lecture-5.md"
+    "lecture-5": "slidev lecture-5.md",
+    "lecture-6": "slidev lecture-6.md"
   },
   "dependencies": {
     "@slidev/cli": "^0.49.28",
@@ -20,6 +21,6 @@
     "vue": "^3.5.27"
   },
   "devDependencies": {
-    "playwright-chromium": "^1.54.2"
+    "playwright-chromium": "^1.58.2"
   }
 }
