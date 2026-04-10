@@ -67,4 +67,3 @@ Para concluir a atividade, siga estes passos:
 4. **Confirmar:** Clique em "Entregar".
 
 ---
-*Transforme dados estáticos em uma experiência viva com JavaScript!*
