@@ -5,7 +5,7 @@
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open",
-    "export": "slidev export",
+    "export": "npx playwright install && slidev export",
     "lecture-0": "slidev lecture-0.md",
     "lecture-1": "slidev lecture-1.md",
     "lecture-2": "slidev lecture-2.md",
