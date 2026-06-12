@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página de apresentação da disciplina de Desenvolvimento Web para o Curso Técnico em Segurança Cibernética. Exemplo prático de deploy estático.">
+  <title>Desenvolvimento Web & Segurança Cibernética | Inmetro</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Background Glows -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container header-container">
+      <div class="logo">
+        <i class="fa-solid fa-shield-halved logo-icon"></i>
+        <span>DevWeb<span class="highlight">.Sec</span></span>
+      </div>
+      <nav class="nav-menu">
+        <a href="#sobre"><i class="fa-solid fa-circle-info"></i> Sobre</a>
+        <a href="#tecnologias"><i class="fa-solid fa-code"></i> Tecnologias</a>
+        <a href="#cronograma"><i class="fa-solid fa-calendar-days"></i> Cronograma</a>
+        <a href="#simulador"><i class="fa-solid fa-server"></i> Simulador de Deploy</a>
+      </nav>
+      <a href="https://github.com/paulormnas/desenvolvimento-web" target="_blank" class="btn btn-outline github-link-btn" id="github-header-btn">
+        <i class="fa-brands fa-github"></i> Repositório
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="badge"><i class="fa-solid fa-shield-virus"></i> Segurança Cibernética</span>
+        <h1>Programação de <br><span class="gradient-text">Aplicações Web</span></h1>
+        <p class="hero-subtitle">
+          Aprenda a construir a base da internet moderna. Da semântica estrutural do HTML ao deploy seguro e automatizado em nuvem global.
+        </p>
+        <div class="hero-actions">
+          <a href="#simulador" class="btn btn-primary" id="hero-deploy-btn">
+            <i class="fa-solid fa-rocket"></i> Ver Simulador
+          </a>
+          <a href="#cronograma" class="btn btn-secondary" id="hero-schedule-btn">
+            <i class="fa-solid fa-list-check"></i> Ver Conteúdo
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="code-card">
+          <div class="code-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="file-name"><i class="fa-solid fa-lock"></i> security.js</span>
+          </div>
+          <pre class="code-body"><code><span class="keyword">const</span> <span class="variable">app</span> = <span class="function">express</span>();
+
+<span class="comment">// Cabeçalhos de segurança essenciais</span>
+<span class="variable">app</span>.<span class="property">use</span>(<span class="function">helmet</span>()); 
+
+<span class="comment">// Previne ataques XSS em inputs</span>
+<span class="variable">app</span>.<span class="property">use</span>(<span class="function">sanitizeInputs</span>()); 
+
+<span class="variable">app</span>.<span class="property">listen</span>(<span class="number">443</span>, () => {
+  <span class="variable">console</span>.<span class="property">log</span>(<span class="string">"🛡️ Server running securely on port 443"</span>);
+});</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    
+    <!-- Section: Sobre -->
+    <section id="sobre" class="content-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Sobre a Disciplina</h2>
+          <p>O que você vai aprender e por que é fundamental para a Segurança Cibernética</p>
+        </div>
+        
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>Fundação Web</h3>
+            <p>Construir a base sólida do frontend. Compreender a renderização no navegador, o ciclo de vida do DOM e as requisições assíncronas.</p>
+          </div>
+          
+          <div class="info-card">
+            <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Desenvolvimento Seguro</h3>
+            <p>Aprender como falhas comuns de segurança (como XSS, injeção de tags, vazamento de tokens no frontend) nascem e como mitigá-las na raiz.</p>
+          </div>
+          
+          <div class="info-card">
+            <div class="card-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+            <h3>Automação & Cloud</h3>
+            <p>Publicar projetos reais em redes CDN globais usando esteiras de CI/CD automatizadas a partir do seu repositório no GitHub.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Tecnologias -->
+    <section id="tecnologias" class="content-section bg-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Stack Tecnológica</h2>
+          <p>As tecnologias pilares do desenvolvimento web moderno que estudaremos</p>
+        </div>
+        
+        <div class="tech-grid">
+          <div class="tech-card html">
+            <div class="tech-icon"><i class="fa-brands fa-html5"></i></div>
+            <div class="tech-info">
+              <h3>HTML5</h3>
+              <p>Estrutura e semântica de dados. Elementos cruciais para acessibilidade e SEO.</p>
+            </div>
+          </div>
+          
+          <div class="tech-card css">
+            <div class="tech-icon"><i class="fa-brands fa-css3-alt"></i></div>
+            <div class="tech-info">
+              <h3>CSS3</h3>
+              <p>Estilização avançada, Flexbox, Grid Layout, responsividade para telas de todos os tamanhos.</p>
+            </div>
+          </div>
+          
+          <div class="tech-card js">
+            <div class="tech-icon"><i class="fa-brands fa-square-js"></i></div>
+            <div class="tech-info">
+              <h3>JavaScript</h3>
+              <p>Lógica de programação, manipulação do DOM e comunicação assíncrona com APIs externas.</p>
+            </div>
+          </div>
+          
+          <div class="tech-card cicd">
+            <div class="tech-icon"><i class="fa-solid fa-arrows-spin"></i></div>
+            <div class="tech-info">
+              <h3>CI/CD & Deploy</h3>
+              <p>Deploy de arquivos estáticos integrados ao git usando Vercel, Netlify e GitHub Pages.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Cronograma -->
+    <section id="cronograma" class="content-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Cronograma do Curso</h2>
+          <p>Navegue pelo conteúdo programático de cada semana de aula</p>
+        </div>
+        
+        <div class="accordion">
+          <!-- Aula 0 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" id="acc-btn-0">
+              <span class="acc-title"><span class="badge-number">Aula 00</span> Conceitos Iniciais sobre a Web</span>
+              <span class="acc-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">
+                <p>Introdução ao funcionamento da Internet, protocolo HTTP/HTTPS, modelo cliente-servidor e a arquitetura das páginas web básicas.</p>
+                <ul class="class-topics">
+                  <li><i class="fa-solid fa-check text-green"></i> Funcionamento do DNS e servidores de arquivos</li>
+                  <li><i class="fa-solid fa-check text-green"></i> Anatomia de uma requisição e resposta HTTP</li>
+                  <li><i class="fa-solid fa-check text-green"></i> O que é HTML, CSS e JS sob a perspectiva do navegador</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Aula 1 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" id="acc-btn-1">
+              <span class="acc-title"><span class="badge-number">Aula 01</span> Fundamentos do HTML</span>
+              <span class="acc-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">
+                <p>Primeiros passos na criação da estrutura de páginas usando tags estruturais básicas, links e formatação de textos.</p>
+                <ul class="class-topics">
+                  <li><i class="fa-solid fa-check text-green"></i> Tags fundamentais: h1-h6, p, a, strong, em</li>
+                  <li><i class="fa-solid fa-check text-green"></i> Criação de listas ordenadas e não ordenadas</li>
+                  <li><i class="fa-solid fa-check text-green"></i> Atributos HTML: href, target, src, alt</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Aula 2 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" id="acc-btn-2">
+              <span class="acc-title"><span class="badge-number">Aula 02</span> HTML Avançado, Tabelas e Mídia</span>
+              <span class="acc-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">
+                <p>Melhorando a exibição de informações complexas e ricos formatos de mídia. Introdução à semântica estrutural.</p>
+                <ul class="class-topics">
+                  <li><i class="fa-solid fa-check text-green"></i> Tabelas complexas (thead, tbody, tr, td, th)</li>
+                  <li><i class="fa-solid fa-check text-green"></i> Incorporação de mídias: audio, video e iframe</li>
+                  <li><i class="fa-solid fa-check text-green"></i> HTML Semântico (header, nav, main, article, section, footer)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Aula 3 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" id="acc-btn-3">
+              <span class="acc-title"><span class="badge-number">Aula 03</span> Fundamentos do CSS e Seletores</span>
+              <span class="acc-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">
+                <p>Estilizando as estruturas criadas. Selecionando elementos com precisão e aplicando estilos visuais fundamentais.</p>
+                <ul class="class-topics">
+                  <li><i class="fa-solid fa-check text-green"></i> Sintaxe CSS, Inline vs Internal vs External CSS</li>
+                  <li><i class="fa-solid fa-check text-green"></i> Seletores básicos: tag, classe (.class), id (#id) e combinadores</li>
+                  <li><i class="fa-solid fa-check text-green"></i> Cores (RGB, HSL, Hexadecimal) e tipografia (font-family, size, weight)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Aula 4 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" id="acc-btn-4">
+              <span class="acc-title"><span class="badge-number">Aula 04</span> Box Model e Layouts</span>
+              <span class="acc-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">
+                <p>Como os elementos se posicionam na tela. O modelo de caixa do navegador e sistemas de grid e flexbox.</p>
+                <ul class="class-topics">
+                  <li><i class="fa-solid fa-check text-green"></i> Margin, Padding, Border e Box-sizing: border-box</li>
+                  <li><i class="fa-solid fa-check text-green"></i> Posicionamentos (static, relative, absolute, fixed)</li>
+                  <li><i class="fa-solid fa-check text-green"></i> Introdução prática a Flexbox e CSS Grid</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Aula 5 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" id="acc-btn-5">
+              <span class="acc-title"><span class="badge-number">Aula 05</span> CSS Responsivo e Variáveis</span>
+              <span class="acc-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">
+                <p>Criando sites que se adaptam a smartphones, tablets e desktops de forma fluida. Uso de variáveis CSS.</p>
+                <ul class="class-topics">
+                  <li><i class="fa-solid fa-check text-green"></i> Media Queries (@media) e breakpoints</li>
+                  <li><i class="fa-solid fa-check text-green"></i> Unidades relativas (rem, em, vw, vh, %)</li>
+                  <li><i class="fa-solid fa-check text-green"></i> Custom Properties (variáveis CSS) para reusabilidade</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Aula 6 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" id="acc-btn-6">
+              <span class="acc-title"><span class="badge-number">Aula 06</span> Introdução ao JavaScript</span>
+              <span class="acc-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">
+                <p>Dando inteligência e dinamismo à página web. Variáveis, lógica condicional e loops.</p>
+                <ul class="class-topics">
+                  <li><i class="fa-solid fa-check text-green"></i> Sintaxe JavaScript, let, const e escopo</li>
+                  <li><i class="fa-solid fa-check text-green"></i> Condicionais (if/else, switch) e laços (for, while)</li>
+                  <li><i class="fa-solid fa-check text-green"></i> Declaração e invocação de funções simples</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Aula 7 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" id="acc-btn-7">
+              <span class="acc-title"><span class="badge-number">Aula 07</span> Manipulação do DOM e Eventos</span>
+              <span class="acc-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">
+                <p>Conectando o JavaScript com o HTML. Capturar cliques, alterar textos e estilos da página em tempo real.</p>
+                <ul class="class-topics">
+                  <li><i class="fa-solid fa-check text-green"></i> querySelector e querySelectorAll</li>
+                  <li><i class="fa-solid fa-check text-green"></i> addEventListener (click, submit, input, keydown)</li>
+                  <li><i class="fa-solid fa-check text-green"></i> Alterando classes CSS dinamicamente com classList</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Aula 8 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" id="acc-btn-8">
+              <span class="acc-title"><span class="badge-number">Aula 08</span> Requisições de APIs (Fetch)</span>
+              <span class="acc-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">
+                <p>Conectando sua aplicação a serviços externos na internet para carregar dados dinâmicos de forma assíncrona.</p>
+                <ul class="class-topics">
+                  <li><i class="fa-solid fa-check text-green"></i> Formato JSON (JavaScript Object Notation)</li>
+                  <li><i class="fa-solid fa-check text-green"></i> Chamadas com Fetch API, promises, async/await</li>
+                  <li><i class="fa-solid fa-check text-green"></i> Tratamento de erros em requisições de rede</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Aula 9 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" id="acc-btn-9">
+              <span class="acc-title"><span class="badge-number">Aula 09</span> Deploy de Projetos e CI/CD</span>
+              <span class="acc-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">
+                <p>Publicando o seu código na internet de forma automatizada e com as melhores práticas de esteira de integração.</p>
+                <ul class="class-topics">
+                  <li><i class="fa-solid fa-check text-green"></i> Ciclo de vida de software: Dev, Staging e Produção</li>
+                  <li><i class="fa-solid fa-check text-green"></i> Deploy estático no GitHub Pages e Vercel</li>
+                  <li><i class="fa-solid fa-check text-green"></i> O que é CI/CD e como automatizar deploys via Git Pushes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Simulador de Deploy -->
+    <section id="simulador" class="content-section bg-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Simulador de Deploy (CI/CD)</h2>
+          <p>Veja em tempo real o que acontece nos servidores quando você publica um projeto estático</p>
+        </div>
+        
+        <div class="deploy-simulator">
+          <div class="simulator-controls">
+            <h3>Painel de Controle</h3>
+            <p class="description">Clique no botão para iniciar um deploy simulado deste projeto no servidor CDN de demonstração.</p>
+            <button id="start-deploy-btn" class="btn btn-primary btn-block">
+              <i class="fa-solid fa-play"></i> Iniciar Esteira CI/CD
+            </button>
+            
+            <div class="status-panel">
+              <div class="status-item">
+                <span class="status-label">Etapa Atual:</span>
+                <span id="current-step" class="status-val">Aguardando...</span>
+              </div>
+              <div class="status-item">
+                <span class="status-label">Status Geral:</span>
+                <span id="overall-status" class="status-badge idle">Inativo</span>
+              </div>
+            </div>
+
+            <div class="deployment-url-container hidden" id="url-container">
+              <p class="url-label">🚀 Projeto publicado com sucesso em:</p>
+              <a href="#" target="_blank" id="deployed-url" class="deployed-url-link">https://projeto-cybersec-demo.vercel.app</a>
+            </div>
+          </div>
+          
+          <div class="simulator-terminal">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title"><i class="fa-solid fa-terminal"></i> Console de Integração Contínua (CI/CD)</span>
+              <button id="clear-terminal-btn" class="terminal-action" title="Limpar Console">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </div>
+            <div class="terminal-body" id="terminal-log">
+              <div class="log-line text-muted">$ system_status --check</div>
+              <div class="log-line text-success">Esteira de CI/CD pronta para execução. Aguardando commit ou ação manual...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <div class="logo">
+          <i class="fa-solid fa-shield-halved logo-icon"></i>
+          <span>DevWeb<span class="highlight">.Sec</span></span>
+        </div>
+        <p>Curso de Programação de Aplicações Web focado em Segurança Cibernética. Inmetro, 2026.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Acesso Rápido</h4>
+        <a href="#sobre">Sobre o Curso</a>
+        <a href="#tecnologias">Tecnologias</a>
+        <a href="#cronograma">Cronograma</a>
+        <a href="#simulador">CI/CD Simulator</a>
+      </div>
+      <div class="footer-info">
+        <h4>Repositório Oficial</h4>
+        <p>Acesse o código-fonte, slides completos e materiais de aula diretamente no GitHub.</p>
+        <a href="https://github.com/paulormnas/desenvolvimento-web" target="_blank" class="btn btn-outline footer-btn">
+          <i class="fa-brands fa-github"></i> github.com/paulormnas
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Curso Técnico em Segurança Cibernética - Inmetro. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>
